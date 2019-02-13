@@ -1,0 +1,25 @@
+{
+  "name": "adminstracion_db",
+  "version": "1.0.0",
+  "description": "poblar base datos ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "base",
+    "datos",
+    "sql",
+    "valores",
+    "aleatoreos"
+  ],
+  "author": "Eduardo avila",
+  "license": "ISC",
+  "dependencies": {
+    "mysql2": "^1.6.5",
+    "semantics3-node": "0.0.3",
+    "superagent": "^4.1.0",
+    "uuid": "^3.3.2",
+    "yargs": "^13.1.0"
+  }
+}

@@ -16,6 +16,7 @@
   "author": "Eduardo avila",
   "license": "ISC",
   "dependencies": {
+    "moment": "^2.24.0",
     "mysql2": "^1.6.5",
     "semantics3-node": "0.0.3",
     "superagent": "^4.1.0",

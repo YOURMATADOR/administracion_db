@@ -4,7 +4,7 @@ var sem3 = require('semantics3-node')(api_key, api_secret)
 const db = require('../utils/database')
 const uuid = require('uuid/v1')
 const request = require('superagent')
-
+ 
 // Run the request
 
 class Producto {

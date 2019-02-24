@@ -16,9 +16,14 @@
   "author": "Eduardo avila",
   "license": "ISC",
   "dependencies": {
+    "bcrypt": "^3.0.4",
+    "body-parser": "^1.18.3",
+    "ejs": "^2.6.1",
+    "express": "^4.16.4",
     "moment": "^2.24.0",
     "mysql2": "^1.6.5",
     "semantics3-node": "0.0.3",
+    "sequelize": "^4.42.0",
     "superagent": "^4.1.0",
     "uuid": "^3.3.2",
     "yargs": "^13.1.0"

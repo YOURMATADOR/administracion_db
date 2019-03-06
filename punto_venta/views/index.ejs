@@ -7,6 +7,14 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Indice chido</h1>
+    <%if(usuarios.length> 0){%>
+        <ul>
+        <%usuarios.forEach(i => {%>
+            <li><%=i.id%> <%=i.nombre%> <%=i.direccion%> <%=i.telefono%> <%=i.contraseña%> <%=i.cumpleaños%> <%=i.rol%> <%=i.registro%> <%=i.correo%></li>
+        <%})%>
+    </ul>
+    <%}else{%>
+        <h1>No hay usuarios en la base de datos</h1>
+        <%}%>
 </body>
 </html>

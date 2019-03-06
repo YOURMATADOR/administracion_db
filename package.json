@@ -18,8 +18,10 @@
   "dependencies": {
     "bcrypt": "^3.0.4",
     "body-parser": "^1.18.3",
+    "cron": "^1.6.0",
     "ejs": "^2.6.1",
     "express": "^4.16.4",
+    "ftp-client": "^0.2.2",
     "moment": "^2.24.0",
     "mysql2": "^1.6.5",
     "semantics3-node": "0.0.3",

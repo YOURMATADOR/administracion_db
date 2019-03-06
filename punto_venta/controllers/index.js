@@ -3,8 +3,16 @@ const usuario = require('../models/usuario')
 const getLogin =  (req,res,next)=> {
     res.render('login')
 }
-const getIndex =  (req,res,next)=> {
-    res.render('index')
+const getIndex =  async (req,res,next)=> {
+	try{
+		let usuarios = await usuario.findAll({raw:true})
+		// console.log(usuarios);
+		
+	res.render('index',{usuarios})
+	}
+	catch(err){
+		console.log(err);		
+	}
 
 }
 const getRegistro =  (req,res,next)=> {

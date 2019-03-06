@@ -1,8 +1,8 @@
 const Sequelize = require('sequelize');
-const sequelize = new Sequelize('Punto_Venta', 'tumatador', 'mansanita', {
+const sequelize = new Sequelize('Punto_Venta', 'root', '', {
   host: 'localhost',
   dialect: 'mysql',
-  port:8889,
+  port:3306,
   operatorsAliases: false,  
   pool: {
     max: 5,

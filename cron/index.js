@@ -22,8 +22,6 @@ const client = new ftp_cliente(
   { loggin: "basic" }
 );
 
-
-
 new CronJob(
   "* * * * *",
   async function() {
@@ -33,8 +31,8 @@ new CronJob(
         `cd C:\\xampp\\mysql\\bin && mysqldump.exe --user=root --password= --databases punto_venta > respaldos\\punto${id_respaldo}.sql`
       );
       //  const { stdout, stderr }=  await exec(`cd C:\\xampp\\mysql\\bin && mysqldump.exe --user=root --password=  punto_venta > E:\\punto${uuid()}.sql`)
-        
-        // * respaldo a USB
+
+      // * respaldo a USB
       // fs.copyFile(
       //   new URL(`RUTA DE USB`),
       //   path.join(__dirname, "../", `respaldos/punto${id_respaldo}.sql`),
@@ -70,9 +68,9 @@ new CronJob(
                 console.log(err_r);
               }
               mailer.sendMail({
-                sender: "jesus.amancilla@alumnos.udg.mx",
-                to: "jesus.amancilla@alumnos.udg.mx",
-                subject: "respaldo nodemailer!",
+                sender: process.env.MAIL,
+                to: process.env.MAIL_TO,
+                subject: "respaldo Eduardo Avila!",
                 body: "contenido mail chido",
                 attachments: [{ filename: "RespaldoDB.sql", content: file }]
               }),

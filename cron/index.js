@@ -11,33 +11,42 @@ const client = new ftp_cliente(
   { loggin: "basic" }
 );
 
-fs.copyFile(
-  new URL(
-    "file://C:/xampp/mysql/bin/respaldos/puntoa642ee60-4001-11e9-b327-550c36ddf77a.sql"
-  ),
-  path.join(
-    __dirname,
-    "../",
-    "respaldos/puntoa642ee60-4001-11e9-b327-550c36ddf77a.sql"
-  ),
-  err => {
-    if (err) {
-      console.log(err);
-    }
-    client.connect(function() {
-      client.upload(
-        ["respaldos/**"],
-        "respaldos/",
-        {
-          overwrite: "older"
-        },
-        function(result) {
-          console.log(result);
-        }
-      );
-    });
+fs.readdir('/Applications/xampp/xamppfiles/bin/',(err,files)=> {
+  if(err){
+    console.log(err);
   }
-);
+  files.forEach(i=> {
+    console.log(i);
+    
+  })
+})
+// fs.copyFile(
+//   new URL(
+//     "file://C:/xampp/mysql/bin/respaldos/puntoa642ee60-4001-11e9-b327-550c36ddf77a.sql"
+//   ),
+//   path.join(
+//     __dirname,
+//     "../",
+//     "respaldos/puntoa642ee60-4001-11e9-b327-550c36ddf77a.sql"
+//   ),
+//   err => {
+//     if (err) {
+//       console.log(err);
+//     }
+//     client.connect(function() {
+//       client.upload(
+//         ["respaldos/**"],
+//         "respaldos/",
+//         {
+//           overwrite: "older"
+//         },
+//         function(result) {
+//           console.log(result);
+//         }
+//       );
+//     });
+//   }
+// );
 
 // new CronJob('* * * * * *', async function() {
 

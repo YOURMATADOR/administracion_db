@@ -33,7 +33,16 @@ new CronJob(
         `cd C:\\xampp\\mysql\\bin && mysqldump.exe --user=root --password= --databases punto_venta > respaldos\\punto${id_respaldo}.sql`
       );
       //  const { stdout, stderr }=  await exec(`cd C:\\xampp\\mysql\\bin && mysqldump.exe --user=root --password=  punto_venta > E:\\punto${uuid()}.sql`)
-
+        
+        // * respaldo a USB
+      // fs.copyFile(
+      //   new URL(`RUTA DE USB`),
+      //   path.join(__dirname, "../", `respaldos/punto${id_respaldo}.sql`),
+      //   err => {
+      //     if (err) {
+      //       console.log(err);
+      //     }
+      //   })
       fs.copyFile(
         new URL(`file://C:/xampp/mysql/bin/respaldos/punto${id_respaldo}.sql`),
         path.join(__dirname, "../", `respaldos/punto${id_respaldo}.sql`),

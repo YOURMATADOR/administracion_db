@@ -1,0 +1,17 @@
+$EmailFrom = “jesus.amancilla@alumnos.udg.mx”
+
+$EmailTo = “jesus.amancilla@alumnos.udg.mx”
+
+$Subject = “Respaldo de base datos”
+
+$Body = “Respaldo de base datos adminstracion de base”
+
+$SMTPServer = “smtp.gmail.com”
+
+$SMTPClient = New-Object Net.Mail.SmtpClient($SmtpServer, 587)
+
+$SMTPClient.EnableSsl = $true
+
+$SMTPClient.Credentials = New-Object System.Net.NetworkCredential(“jesus.amancilla@alumnos.udg.mx”, "mansanita321");
+
+$SMTPClient.Send($EmailFrom, $EmailTo, $Subject, $Body)

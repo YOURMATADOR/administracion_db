@@ -16,5 +16,7 @@ app.use(express.static(path.join(__dirname,'public')))
 app.use(index_router)
 app.use(login_router)
 app.use(registro_router)
-
+app.use((req,res,next)=>{
+    res.render('404')
+})
 app.listen(PORT,()=> console.log('escuchando desde el puerto ',PORT,`ingresa con http://localhost:${PORT}`))

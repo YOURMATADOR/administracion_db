@@ -5,10 +5,11 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "cron-start":"node -r dotenv/config cron/index.js"
+    "cron-start": "node -r dotenv/config cron/index.js",
+    "start-punto": "node punto_venta/index.js"
   },
   "keywords": [
-    "base", 
+    "base",
     "datos",
     "sql",
     "valores",
@@ -24,10 +25,12 @@
     "dotenv": "^6.2.0",
     "ejs": "^2.6.1",
     "express": "^4.16.4",
+    "express-validator": "^5.3.1",
     "ftp-client": "^0.2.2",
     "moment": "^2.24.0",
     "mysql2": "^1.6.5",
     "nodemailer": "^5.1.1",
+    "nodemon": "^1.18.10",
     "semantics3-node": "0.0.3",
     "sequelize": "^4.42.0",
     "superagent": "^4.1.0",

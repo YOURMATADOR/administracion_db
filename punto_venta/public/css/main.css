@@ -9,7 +9,16 @@
   font-family: Ubuntu-Regular;
   src: url('../fonts/ubuntu/Ubuntu-Regular.ttf'); 
 }
-
+.error{
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1rem;
+  background: red;
+  padding: 1rem;
+  border-radius: .3rem;
+  color: white;
+  font-weight: bold;
+}
 @font-face {
   font-family: Ubuntu-Bold;
   src: url('../fonts/ubuntu/Ubuntu-Bold.ttf'); 
